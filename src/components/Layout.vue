@@ -40,11 +40,11 @@
           color="green"
           overlap
         >
-          <v-icon>mdi-cart</v-icon>
+          <v-icon>mdi-shopping</v-icon>
         </v-badge>      
       </v-btn>
       <v-btn v-on="on" href="/registration" icon>
-      <v-icon> mdi-account-plus </v-icon>
+      <v-icon> mdi-account-circle </v-icon>
       </v-btn>
        
     </v-app-bar>
