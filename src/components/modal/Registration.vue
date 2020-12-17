@@ -2,7 +2,7 @@
   
     <div id="app">
     <v-app>
-        <v-dialog v-model="dialog" persistent max-width="600px" min-width="360px">
+        <v-dialog v-model="dialog" persistent max-width="600px" min-width="360px" transition="dialog-bottom-transition">
             <div>
                 <v-tabs v-model="tab" show-arrows background-color="indigo darken-3" icons-and-text dark grow>
                     <v-tabs-slider color="blue lighten-3"></v-tabs-slider>
@@ -11,10 +11,9 @@
                         <div class="caption py-1">{{ i.name }}</div>
                     </v-tab>
                      
-                        <v-btn @click="(click) (exit=!exit)" icon>
-                            <v-icon v-if="!exit">mdi-window-close</v-icon>
-                            <v-icon v-else>mdi-close</v-icon>
-                        </v-btn>
+                    <v-btn icon dark @click="dialog = false" >
+                        <v-icon>mdi-close</v-icon>
+                    </v-btn>
                     
                     <v-tab-item>
                         <v-card class="px-4">
@@ -82,10 +81,14 @@
             }
         },
         methods: {
+            
             validate() {
                 if (this.$refs.loginForm.validate()) {
                     // submit form to server/API here...
                 }
+            },
+            closeModal () {
+                this.$store.commit('showSignupModal', false);
             },
             reset() {
                 this.$refs.form.reset();
@@ -99,7 +102,7 @@
         tab: 0,
         tabs: [
             {name:"Login", icon:"mdi-account"},
-            {name:"Register", icon:"mdi-account-outline"}
+            {name:"Register", icon:"mdi-account-plus"}
                     ],
         valid: true,
     

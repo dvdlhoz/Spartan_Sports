@@ -2,16 +2,16 @@
   <div>
     <v-container>
 
-      <p class="display-3 font-weight-light	text-center pa-4">SHOPPING CART</p>
+      <p class="display-3 font-weight-light	text-center pa-4">CARRITO DE COMPRA</p>
       <v-row>
         <v-col :cols="12" md="9" sm="12" >
           <v-simple-table>
             <template v-slot:default>
               <thead>
               <tr>
-                <th class="text-center">ITEM</th>
-                <th class="text-center">PRICE</th>
-                <th class="text-center">QUANTITY</th>
+                <th class="text-center">PRODUCTO</th>
+                <th class="text-center">PRECIO</th>
+                <th class="text-center">CANTIDAD</th>
                 <th class="text-center">TOTAL</th>
                 <th class="text-center"></th>
               </tr>
@@ -28,11 +28,11 @@
                   </v-list-item-avatar>
 
                   <v-list-item-content>
-                    <v-list-item-title >Item 1</v-list-item-title>
-                    <v-list-item-subtitle>Lorem Ipsum</v-list-item-subtitle>
+                    <v-list-item-title >Producto 1</v-list-item-title>
+                    <v-list-item-subtitle>ARTICULO</v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item></td>
-                <td>$40.00</td>
+                <td>$400000.00</td>
                 <td>
                   <v-text-field
                     class="pt-10"
@@ -44,7 +44,7 @@
                     type="number"
                   ></v-text-field>
                 </td>
-                <td>$80.00</td>
+                <td>$70000.00</td>
                 <td><a>X</a></td>
               </tr>
               <tr>
@@ -58,11 +58,11 @@
                   </v-list-item-avatar>
 
                   <v-list-item-content>
-                    <v-list-item-title >Item 2</v-list-item-title>
-                    <v-list-item-subtitle>Lorem Ipsum</v-list-item-subtitle>
+                    <v-list-item-title >Producto 2</v-list-item-title>
+                    <v-list-item-subtitle>Articulo</v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item></td>
-                <td>$40.00</td>
+                <td>$800000.00</td>
                 <td>
                   <v-text-field
                     class="pt-10"
@@ -74,7 +74,7 @@
                     type="number"
                   ></v-text-field>
                 </td>
-                <td>$80.00</td>
+                <td>$100000.00</td>
                 <td><a>X</a></td>
               </tr>
               </tbody>
@@ -82,27 +82,27 @@
           </v-simple-table>
         </v-col>
         <v-col :cols="12" md="3" sm="12" style="background-color: lightgray">
-          <p class="headline">Order Summary</p>
-          <p class="overline">Shipping and additional costs are calculated based on values you have entered.
+          <p class="headline">RESUMEN DE ORDEN</p>
+          <p class="overline"> El envio y costos adicionales son calculados en base a los valores ingresados.
           </p>
           <v-simple-table>
             <template v-slot:default>
               <tbody>
               <tr>
                 <td>Order Subtotal</td>
-                <td class="text-right" style="width: 50px;">$160.00</td>
+                <td class="text-right" style="width: 50px;">$1600000.00</td>
               </tr>
               <tr>
-                <td>Shipping Charges</td>
-                <td class="text-right" style="width: 50px;">$10.00</td>
+                <td>Cargos de Envio</td>
+                <td class="text-right" style="width: 50px;">$100000.00</td>
               </tr>
               <tr>
-                <td>Tax</td>
-                <td class="text-right" style="width: 50px;">$5.00</td>
+                <td>Impuesto</td>
+                <td class="text-right" style="width: 50px;">$5000.00</td>
               </tr>
               <tr>
                 <td>Total</td>
-                <td class="text-right" style="width: 50px;"><b>$175.00</b></td>
+                <td class="text-right" style="width: 50px;"><b>$17500000.00</b></td>
               </tr>
               </tbody>
             </template>
