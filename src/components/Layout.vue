@@ -13,23 +13,18 @@
       >
         <a href="/" class="white--text" style="text-decoration: none"><v-icon>mdi-weight-lifter</v-icon>&nbsp;SpartanSports</a>
       </v-toolbar-title>
-      <v-text-field
-        flat
-        solo-inverted
-        hide-details
-        prepend-inner-icon="mdi-magnify"
-        label="Search"
+      <v-text-field flat solo-inverted  hide-details prepend-inner-icon="mdi-magnify" label="Search"
         class="hidden-sm-and-down pl-10 ml-4"
       />
       <v-spacer />
       
-      <v-btn href="#" icon>
+      <v-btn href="#" :title="facebookTooltip" icon>
         <v-icon> mdi-facebook </v-icon>
       </v-btn>
-      <v-btn icon>
+      <v-btn href="#" :title="instagramTooltip" icon>
         <v-icon>mdi-instagram</v-icon>
       </v-btn>
-      <v-btn icon>
+      <v-btn href="#" :title="twitterTooltip" icon>
         <v-icon>mdi-twitter</v-icon>
       </v-btn>
      
@@ -139,7 +134,12 @@
     </v-footer>
   </v-app>
 </template>
+
 <script>
+    import SptSearch from '../Search';
+    
+    
+
     export default {
         data () {
             return {
@@ -151,7 +151,12 @@
                     { title: 'Natación' },
                 ],
                 activeBtn: 1,
+                facebookTooltip: 'Follow us on Facebook',
+                instagramTooltip: 'Follow us on Instagram',
+                twitterTooltip: 'Follow us on Twitter',
             }
+        },
+        components: {  SptSearch,
         },
     }
 </script>
